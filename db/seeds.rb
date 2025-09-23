@@ -18,9 +18,22 @@ more_movies = [
   {:title => 'Nomadland', :rating => 'R',
     :release_date => '19-Feb-2021'},
   {:title => 'CODA', :rating => 'PG-13',
-    :release_date => '13-Aug-2021'}
+    :release_date => '13-Aug-2021'},
+  {:title => 'Howl\'s Moving Castle', :rating => 'PG-13',
+    :release_date => '20-Nov-2004'},
+  {:title => 'The Boy and the Heron', :rating => 'G',
+    :release_date => '20-Dec-2023'},
+  {:title => 'Oppenheimer', :rating => 'R',
+    :release_date => '21-July-2023'},
+  {:title => 'Barbie', :rating => 'PG-13',
+    :release_date => '21-July-2023'},
+  {:title => 'Superman', :rating => 'PG-13',
+    :release_date => '11-July-2025'}
 ]
 
+
 more_movies.each do |movie|
-  Movie.create!(movie)
+  Movie.find_or_create_by(title: movie[:title]) do |m|
+    m.assign_attributes(movie)
+  end
 end
