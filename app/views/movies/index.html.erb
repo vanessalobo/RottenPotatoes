@@ -33,7 +33,7 @@
       <tr>
         <td class="<%= sort_class("title") %>"><%= link_to movie.title, movie_path(movie) %></td>
         <td class="<%= sort_class("rating") %>"><%= movie.rating %></td>
-        <td class="<%= sort_class("release_date") %>"><%= movie.release_date.strftime("%B %d, %Y") %></td>
+        <td class="<%= sort_class("release_date") %>"><%= movie.release_date.try(:strftime, "%B %d, %Y") %></td>
       </tr>
     <% end %>
   </tbody>
