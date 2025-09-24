@@ -1,10 +1,10 @@
 
-th.sorted-asc {
+.sorted-asc {
   background-color: #d0f0d0; 
   color: #0a0;
 }
 
-th.sorted-desc {
+.sorted-desc {
   background-color: #f0d0d0;
   color: #a00;
 }
