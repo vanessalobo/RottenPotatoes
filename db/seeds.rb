@@ -28,7 +28,9 @@ more_movies = [
   {:title => 'Barbie', :rating => 'PG-13',
     :release_date => '21-July-2023'},
   {:title => 'Superman', :rating => 'PG-13',
-    :release_date => '11-July-2025'}
+    :release_date => '11-July-2025'},
+  {:title => 'The Dark Knight', :rating => 'PG-13',
+    :release_date => '18-July-2008'}
 ]
 
 
