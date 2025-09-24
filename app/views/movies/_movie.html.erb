@@ -16,7 +16,7 @@
 
   <p>
     <strong>Release date:</strong>
-    <%= movie.release_date %>
+    <%= movie.release_date.try(:strftime, "%B %d, %Y") %>
   </p>
 
 </div>
